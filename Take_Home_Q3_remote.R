@@ -10,8 +10,7 @@ Q3data2$Steps<-gsub(pattern = "RT @JennMamaBear: 4,997",
                     ignore.case = TRUE, perl = FALSE, 
                     fixed = FALSE, useBytes = FALSE)
 
-str(Q3data2)
 Q3data2$Steps<-as.numeric(as.character(Q3data2$Steps))
 
 library(ggplot2)
-ggplot(Q3data2, aes(x=Steps, y=Miles)) + geom_point(shape=1)
+plot2<-ggplot(Q3data2, aes(x=Steps, y=Miles)) + geom_point(shape=1)
